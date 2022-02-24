@@ -17,7 +17,6 @@
 ### Designed and simulated with
 * [KiCAD 6.02]
 * [CST Microwave Studio (EM simulator)]
-* 
 ***
 
 <!-- METHOD -->
