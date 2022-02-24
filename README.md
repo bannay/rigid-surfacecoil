@@ -31,19 +31,19 @@
 
 <!-- SEGMENTATION & TUNING -->
 ### **Coil segmentation and tuning**
-The coil is intended for use on a biological samples with a relative dielectric constant $\varepsilon_r=78$. If the coil is intended for  $^1\rm{H}$ detection at 3 Tesla, the Lamour frequency $f_0 = 128.57 \rm{~MHz}$ corresponds to a wavelength within the patient $\lambda_s=\frac{c}{\sqrt{\varepsilon_r}\times f_0}=26.4\rm{~cm}.$
+The coil is intended for use on a biological samples with a relative dielectric constant ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}\varepsilon_r=78). If the coil is intended for  1H detection at 3 Tesla, the Lamour frequency ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}=f_0=128.57\rm{MHz}) corresponds to a wavelength within the patient ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}\lambda_s=\frac{c}{\sqrt{\varepsilon_r}\timesf_0}=26.4\rm{cm}.)
 
-Rule of thumb stipulates contagious length of the coil should be $\lambda_s/20>l>\lambda_s/10$, which translates to $1.32\rm{~cm}>l>2.64\rm{~cm}$.
+Rule of thumb stipulates contagious length of the coil should be ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}\lambda_s/20>l>\lambda_s/10), which translates to ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}1.32\rm{cm}>l>2.64\rm{cm}).
 
-In this example the coils are intended for $^{13}\rm{C}$, which has a gyromagnetic ratio four times lower than $^1\rm{H}$ and thus a 3T Lamour frequency of $f_0 = 32.15 \rm{~MHz}$. When considering the coil segmentation, the rule of thumb suggests a maximum conductor length of $5.28\rm{~cm}>l>10.56\rm{~cm}$.
+In this example the coils are intended for 13C, which has a gyromagnetic ratio four times lower than 1H and thus a 3T Lamour frequency of ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}f_0=32.15\rm{MHz}). When considering the coil segmentation, the rule of thumb suggests a maximum conductor length of ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}5.28\rm{cm}>l>10.56\rm{cm}).
 
-The conductor length $l = 2\pi r = 68.83\rm{~cm}$ resulting in a simulated coil inductance of $575\rm{~nH}$. Given the low resonant frequency, 6 segments ($~l=11.47\rm{~cm}$) were selected to maintain reasonable low tuning capacitors. Accounting for gaps to solder capacitors, the segmentation rule of thumb should be satisfied.
+The conductor length ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}l=2\pir=68.83\rm{cm}) resulting in a simulated coil inductance of ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}575\rm{nH}). Given the low resonant frequency, 6 segments (![formula](https://render.githubusercontent.com/render/math?math=\color{blue}~l=11.47\rm{cm}) were selected to maintain reasonable low tuning capacitors. Accounting for gaps to solder capacitors, the segmentation rule of thumb should be satisfied.
 
-The required lumped capacitance to achieve resonance is $C=\frac{1}{4\pi^2f^2L}=42.6\rm{~pF}$. Given the six segments, $C'=42.6\times6=255\rm{~pF}$.
+The required lumped capacitance to achieve resonance is ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}C=\frac{1}{4\pi^2f^2L}=42.6\rm{pF}). Given the six segments, ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}C'=42.6\times6=255\rm{pF}).
 
 <!--MATCHING -->
 ### **Matching**
-The ideal matching capacitance has been determined via simulation to be $~22\rm{~pF}$ and verified experimentally (using thigh to load the coil). Matching capacitance for an unloaded coil can be analytically approximated given prior knowledge of the coil capacitance and ohmic resistance at DC.
+The ideal matching capacitance has been determined via simulation to be ![formula](https://render.githubusercontent.com/render/math?math=\color{blue}22\rm{pF}) and verified experimentally (using thigh to load the coil). Matching capacitance for an unloaded coil can be analytically approximated given prior knowledge of the coil capacitance and ohmic resistance at DC.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
