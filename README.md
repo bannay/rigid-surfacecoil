@@ -25,26 +25,100 @@
 
 <!-- CRITERIA -->
 ### **Criteria**
-* Rigid coil
-* 20 cm diameter
-* Frequency and matching tunable
-* Transmit/receive 
+* Rigid coil  
+* 20 cm diameter  
+* Frequency and matching tunable  
+* Transmit/receive  
 
 <!-- SEGMENTATION & TUNING -->
-### **Coil segmentation and tuning**
-The coil is intended for use on a patients and biological samples with an average relative dielectric constant ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}\varepsilon_r=78). If the coil is used for  1H detection at 3 Tesla, the Lamour frequency ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}f_0=128.57\rm{MHz}) corresponds to a wavelength within the sample or patient ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}\lambda_s=\frac{c}{\sqrt{\varepsilon_r}\timesf_0}=26.4\rm{cm}.)
+### **Coil Segmentation and Tuning**
 
-Rule of thumb stipulates contagious length of the coil should be ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}\lambda_s/20>l>\lambda_s/10), which translates to ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}1.32\rm{cm}>l>2.64\rm{cm}).
+The coil is intended for use on patients and biological samples with an average relative dielectric constant:
 
-In this example the coils are intended for 13C, which has a gyromagnetic ratio four times lower than 1H and thus a 3T Lamour frequency of ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}f_0=32.15\rm{MHz}). When considering the coil segmentation, the rule of thumb suggests a maximum conductor length of ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}5.28\rm{cm}>l>10.56\rm{cm}).
+$$
+\varepsilon_r = 78
+$$
 
-The conductor length ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}l=2\pir=68.83\rm{cm}) results in a simulated coil inductance of ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}575\rm{nH}). Given the low resonant frequency, 6 segments (![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}~l=11.47\rm{cm}) were selected to maintain reasonable tuning capacitor values. Accounting for conductor gaps to solder capacitors, the segmentation rule of thumb should be satisfied.
+If the coil is used for $^1$H detection at 3 Tesla, the Larmor frequency is:
 
-The required lumped capacitance to achieve resonance is ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}C=\frac{1}{4\pi^2f^2L}=42.6\rm{pF}). Given the six segments, ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}C'=42.6\times6=255\rm{pF}).
+$$
+f_0 = 128.57\ \text{MHz}
+$$
 
-<!--MATCHING -->
+This corresponds to a wavelength within the sample or patient of:
+
+$$
+\lambda_s = \frac{c}{\sqrt{\varepsilon_r} \cdot f_0} = 26.4\ \text{cm}
+$$
+
+A rule of thumb stipulates that the contiguous conductor length of the coil should satisfy:
+
+$$
+\frac{\lambda_s}{20} < l < \frac{\lambda_s}{10}
+$$
+
+which translates to:
+
+$$
+1.32\ \text{cm} < l < 2.64\ \text{cm}
+$$
+
+In this example, the coils are intended for $^{13}$C, which has a gyromagnetic ratio approximately four times lower than $^1$H. Thus, at 3 Tesla, the Larmor frequency becomes:
+
+$$
+f_0 = 32.15\ \text{MHz}
+$$
+
+Applying the same rule of thumb, the maximum conductor length becomes:
+
+$$
+5.28\ \text{cm} < l < 10.56\ \text{cm}
+$$
+
+The total conductor length is:
+
+$$
+l = 2\pi r = 68.83\ \text{cm}
+$$
+
+This results in a simulated coil inductance of:
+
+$$
+L = 575\ \text{nH}
+$$
+
+Given the low resonant frequency, 6 segments were selected:
+
+$$
+l_{\text{segment}} \approx 11.47\ \text{cm}
+$$
+
+This maintains reasonable tuning capacitor values. Accounting for conductor gaps to solder capacitors, this segmentation adheres to the rule of thumb.
+
+The required lumped capacitance to achieve resonance is:
+
+$$
+C = \frac{1}{4\pi^2 f^2 L} = 42.6\ \text{pF}
+$$
+
+Given six segments, the total distributed capacitance becomes:
+
+$$
+C' = 42.6 \times 6 = 255\ \text{pF}
+$$
+
+---
+
 ### **Matching**
-The ideal matching capacitance has been determined via simulation to be ![formula](https://render.githubusercontent.com/render/math?math=\color{magenta}22\rm{pF}) and verified experimentally (using thigh to load the coil). Matching capacitance for an unloaded coil can be analytically approximated given prior knowledge of the coil capacitance and ohmic resistance at DC.
+
+The ideal matching capacitance has been determined via simulation to be:
+
+$$
+C_{\text{match}} = 22\ \text{pF}
+$$
+
+This value was verified experimentally (using a human thigh to load the coil). For an unloaded coil, matching capacitance can also be analytically approximated based on the coil's lumped capacitance and DC ohmic resistance.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
